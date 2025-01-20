@@ -73,14 +73,21 @@ Before running the server, ensure you have the following installed:
 **Response**:  
 ```json
 {
-  "available_models": ["model1", "model2", "model3"]
+  "available_models": [
+    "RandomForestClassifier",
+    "GradientBoostingClassifier",
+    "XGBClassifier",
+    "LogisticRegression",
+    "DecisionTreeClassifier",
+    "KNeighborsClassifier"
+  ]
 }
 ```
 
 ---
 
 ### 3. Make a Prediction  
-**Endpoint**: `/api/predict/<model_name>`  
+**Endpoint**: `/api/predict/<model_name>` - `http://127.0.0.1:5000/api/XGBClassifier`
 **Method**: `POST`  
 **Description**: Use a specific model to make a prediction. Requires a JSON payload with all 71 features.  
 
@@ -91,8 +98,74 @@ A JSON object containing all 71 required features:
   "AAC_A": 0.1,
   "AAC_C": 0.2,
   "AAC_D": 0.3,
-  ...
-  "SER_Y": 0.7
+  "AAC_E": 0.4,
+  "AAC_F": 0.5,
+  "AAC_G": 0.6,
+  "AAC_H": 0.7,
+  "AAC_I": 0.8,
+  "AAC_K": 0.9,
+  "AAC_L": 0.10,
+  "AAC_M": 0.11,
+  "AAC_N": 0.12,
+  "AAC_P": 0.13,
+  "AAC_Q": 0.14,
+  "AAC_R": 0.15,
+  "AAC_S": 0.16,
+  "AAC_T": 0.17,
+  "AAC_V": 0.18,
+  "AAC_W": 0.19,
+  "AAC_Y": 0.20,
+  "PCP_PC": 0.1,
+  "PCP_NC": 0.2,
+  "PCP_NE": 0.3,
+  "PCP_PO": 0.4,
+  "PCP_NP": 0.5,
+  "PCP_AL": 0.6,
+  "PCP_CY": 0.7,
+  "PCP_AR": 0.8,
+  "PCP_AC": 0.9,
+  "PCP_BS": 0.10,
+  "PCP_NE_pH": 0.11,
+  "PCP_HB": 0.12,
+  "PCP_HL": 0.13,
+  "PCP_NT": 0.14,
+  "PCP_HX": 0.15,
+  "PCP_SC": 0.16,
+  "PCP_SS_HE": 0.17,
+  "PCP_SS_ST": 0.18,
+  "PCP_SS_CO": 0.19,
+  "PCP_SA_BU": 0.20,
+  "PCP_SA_EX": 0.21,
+  "PCP_SA_IN": 0.22,
+  "PCP_TN": 0.23,
+  "PCP_SM": 0.24,
+  "PCP_LR": 0.25,
+  "PCP_Z1": 0.26,
+  "PCP_Z2": 0.27,
+  "PCP_Z3": 0.28,
+  "PCP_Z4": 0.29,
+  "PCP_Z5": 0.30,
+  "SEP": 0.31,
+  "SER_A": 0.32,
+  "SER_C": 0.33,
+  "SER_D": 0.34,
+  "SER_E": 0.35,
+  "SER_F": 0.36,
+  "SER_G": 0.37,
+  "SER_H": 0.38,
+  "SER_I": 0.39,
+  "SER_K": 0.40,
+  "SER_L": 0.41,
+  "SER_M": 0.42,
+  "SER_N": 0.43,
+  "SER_P": 0.44,
+  "SER_Q": 0.45,
+  "SER_R": 0.46,
+  "SER_S": 0.47,
+  "SER_T": 0.48,
+  "SER_V": 0.49,
+  "SER_W": 0.50,
+  "SER_Y": 0.51
 }
 ```
 
